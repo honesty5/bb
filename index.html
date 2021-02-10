@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="author" content="jQuery插件库(www.jq22.com)">
+		<meta name="weburl" content="http://www.jq22.com/">
+		<title>基于jQuery开发的全能表单验证插件</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/bq.css" />
+		<style>
+		body{
+			background-color: #000000;
+		}
+			.sp{
+				width: 400px;
+				height: 400px;
+				margin: 0 auto;
+				background-color: #000000;
+			}
+		</style>
+	</head>
+
+	<body>
+		<embed src="" type="" class="sp" style="display: none;"/>
+		<div id="show">
+			
+		</div>
+		<div class="comment">
+			<div class="com_form">
+				<textarea class="input" id="saytext" name="saytext"></textarea>
+				<p id="p_s">
+					<input type="button" class="sub_btn" value="提交">
+					<span class="emotion">表情</span></p>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.qqFace.js"></script>
+	<script type="text/javascript" src="js/bq.js"></script>
+	<script>
+		var sub = document.getElementsByClassName("sub_btn")[0];
+		var say = document.getElementById("saytext").value;
+		var sp = document.getElementsByClassName("sp")[0];
+		var show = document.getElementById("show");
+		var p = document.getElementsByClassName("comment")[0];
+		sub.onclick = function(){
+		setInterval(function (){
+			say.value = "";
+			sp.style.display = "block";
+			show.style.display = "none";
+			p.style.display = "none";
+			sp.src = "炸弹2.swf";
+			},3000)
+		}
+			
+		
+		
+	</script>
+</html>
